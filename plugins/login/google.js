@@ -15,6 +15,6 @@ module.exports = fp(async function (fastify) {
       auth: oauthPlugin.GOOGLE_CONFIGURATION
     },
     startRedirectPath: '/login/google',
-    callbackUri: 'http://localhost:3000/login/google/callback'
+    callbackUri: 'http://local.linqueta.com:3000/login/google/callback'
   })
 });

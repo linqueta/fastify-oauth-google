@@ -7,7 +7,14 @@ module.exports = async function (fastify) {
         return reply.send(err)
       }
 
-      return reply.send(result)
+      reply
+        .setCookie('google', result.id_token, {
+          domain: 'linqueta.com',
+          path: '/'
+        })
+        .send({ result })
+
+      return
     })
   });
 };
