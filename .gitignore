@@ -27,3 +27,4 @@ profile*
 examples/typescript-server.js
 test/types/index.js
 .nyc_output/*
+.env
