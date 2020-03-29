@@ -1,0 +1,38 @@
+{
+  "name": "otter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest test",
+    "start": "node server.js",
+    "dev": "fastify start -w -l info -P app.js",
+    "lint": "npx eslint .",
+    "lint-fix": "npx eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petlove/otter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petlove/otter/issues"
+  },
+  "homepage": "https://github.com/petlove/otter#readme",
+  "dependencies": {
+    "fastify": "^2.0.0",
+    "fastify-autoload": "^1.0.0",
+    "fastify-cli": "^1.4.0",
+    "fastify-oauth2": "^3.0.0",
+    "fastify-plugin": "^1.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "jest": "^25.1.0"
+  }
+}
