@@ -16,5 +16,5 @@ module.exports = fp(async function (fastify) {
     },
     startRedirectPath: '/login/google',
     callbackUri: 'http://local.linqueta.com:3000/login/google/callback'
-  })
+  });
 });

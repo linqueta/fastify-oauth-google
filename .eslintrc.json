@@ -29,6 +29,13 @@
         "semi": [
             "error",
             "always"
+        ],
+        "no-unused-vars": [
+            2,
+            {
+                "vars": "all",
+                "argsIgnorePattern": "^_"
+            }
         ]
     }
 }

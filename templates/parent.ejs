@@ -1,0 +1,40 @@
+<button type="button" onclick="popup('Login...', 800, 800);" style="
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #007bff;
+    font-size: 1rem;
+">Login with Google</button>
+
+<script>
+  let loginWindow = null;
+
+  function popup(title, width, height) {
+    const left = (screen.width / 2) - (width / 2);
+    const top = (screen.height / 2) - (height / 2);
+    let options = '';
+    options += ',width=' + width;
+    options += ',height=' + height;
+    options += ',top=' + top;
+    options += ',left=' + left;
+    loginWindow = window.open('http://local.linqueta.com:3000/login/google', title, options);
+
+    var timer = setInterval(function () {
+      if (loginWindow.closed) {
+        clearInterval(timer);
+        alert(readCookie('googleToken'));
+      }
+    }, 500);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+</script>
